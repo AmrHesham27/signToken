@@ -3,6 +3,12 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors());
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+app.get('/', (req, res) => {
+    res.status(200).send({ message: 'Hi, I am working'})
+})
 
 app.get('/getCerts', (req, res) => {
     try {
