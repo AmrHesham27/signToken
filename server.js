@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/getCerts', (req, res) => {
-    try {
+    /* try {
         SignerDemtra.getCerts({ action: "getCerts" }).then(function (res) {
             var r = JSON.parse(res.result);
             if (res.isValid) {
@@ -23,12 +23,12 @@ app.get('/getCerts', (req, res) => {
     }
     catch (e) {
         res.status(500).send({apiStatus: true, data: e})
-    }
+    } */
         
 })
 
 app.post('/signDocument', (req, res) => {
-    try {
+    /* try {
         SignerDemtra.signJson({ 
             action: "Sign", 
             tokenSerial: req.body.tokenSerial, 
@@ -46,7 +46,7 @@ app.post('/signDocument', (req, res) => {
     }
     catch (e) {
         res.status(500).send({apiStatus: false, data: e})
-    }  
+    }   */
 })
 
 app.listen(3000, () => {
